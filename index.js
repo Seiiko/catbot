@@ -7,7 +7,7 @@ const client = new Discord.Client();
 // SETUP THE DEPENDENCIES
 const fs = require("fs"); // File system dependency.
 const ytdl = require("ytdl-core"); // YouTube core dependency.
-const Music = require('discord.js-musicbot-addon'); // Music bot dependency.
+const MusicBot = require('discord.js-musicbot-addon'); // Music bot dependency.
 
 // SETUP THE COMMANDS COLLECTION
 client.commands = new Discord.Collection();
@@ -128,7 +128,7 @@ fs.readdir("./cmd/interaction", (err, files) => {
 });
 
 // SET UP THE MUSIC CLIENT.
-const music = Music(client, {
+const music = new MusicBot(client, {
   
   youtubeKey: 'AIzaSyCom6F7OFxjJYHDNv6w_3Y2fP3CrTan9JU',
   prefix: '.',
@@ -262,33 +262,6 @@ client.on("message", async message => {
    talkedRecently.delete(message.author.id); }, 2500);
 
  }
-
-});
-
-client.on("message", async message => {
-
-    if(message.author.bot) return;
-    if(message.channel.type === "dm") return;
-
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0];
-    let args = messageArray.slice(1);
-
-    if(!command.startsWith(prefix)) return;
-
-    if(command === `${prefix}userinfo`) {
-
-        let embed = new Discord.RichEmbed()
-            .setThumbnail(message.author.avatarURL)
-            .setAuthor(message.author.username, message.author.avatarURL)
-            .setColor("#ad5dcd")
-            .addField("Full Usertag", `${message.author.username}#${message.author.discriminator}`)
-            .addField("Discord Join Date", message.author.createdAt);
-
-        message.channel.send(embed);
-
-
-    }
 
 });
 
