@@ -1,0 +1,14 @@
+{
+  "name": "catbot",
+  "version": "1.0.0",
+  "description": "Bot for Seii's YouTube Discord server. Moderates and manages suggestions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seii",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
