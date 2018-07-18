@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) => {
             .addField('Bot Owner Commands','c:bavatar   |   c:nick   |   c:status   |   c:utag')
             .addBlankField(true)
   
-        message.member.send(embedHelp);
+        message.member.send(embedCommands);
         message.channel.send(":white_check_mark:  |  A DM has been sent to you with all the help necessary!");
 
     } else { // If a command was specified.
