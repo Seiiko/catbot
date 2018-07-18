@@ -128,7 +128,7 @@ fs.readdir("./cmd/interaction", (err, files) => {
 });
 
 // SET UP THE MUSIC CLIENT.
-const music = new Music(client, {
+const music = Music(client, {
   
   youtubeKey: 'AIzaSyCom6F7OFxjJYHDNv6w_3Y2fP3CrTan9JU',
   prefix: '.',
