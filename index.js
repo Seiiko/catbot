@@ -9,6 +9,12 @@ const fs = require("fs"); // File system dependency.
 const ytdl = require("ytdl-core"); // YouTube core dependency.
 const MusicBot = require('discord.js-musicbot-addon'); // Music bot dependency.
 
+// CREATE THE SPAM COLLECTIONS
+const talkedRecently = new Set();
+const talkedRecently1 = new Set(); 
+const talkedRecently2 = new Set(); 
+const talkedRecently3 = new Set(); 
+
 // SETUP THE COMMANDS COLLECTION
 client.commands = new Discord.Collection();
 
