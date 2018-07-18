@@ -127,20 +127,6 @@ fs.readdir("./cmd/interaction", (err, files) => {
 
 });
 
-// SET UP THE MUSIC CLIENT.
-const music = new MusicBot(client, {
-  
-  youtubeKey: 'AIzaSyCom6F7OFxjJYHDNv6w_3Y2fP3CrTan9JU',
-  prefix: '.',
-  helpCmd: 'mhelp',
-  messageHelp: true,
-  botOwner: '380484645281595392',
-  ownerOverMember: true,
-  enableQueueStat: true,
-  logging: true
-
-});
-
 client.on("ready", async () => {
 
     console.log(`Bot is ready! ${client.user.username}`);
