@@ -251,4 +251,4 @@ client.on("message", async message => {
 
 });
 
-bot.login(botSettings.token);
+client.login(botSettings.token);
